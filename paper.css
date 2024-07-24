@@ -8,7 +8,7 @@
 
 }
 .fight{
-    height:400px;
+    height:270px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -16,8 +16,8 @@
 
 }
 .fight div{
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,8 +26,8 @@
 
 .fight h1{
     background-color: bisque;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@
 body{
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 50px;
     background-color: rgb(212, 204, 204);
 }
 .option{
@@ -48,7 +48,11 @@ body{
 
 }
 .cc{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border: none;
+}
+.cc img{
+    width: 150px;
+    height: 150px;
 }
