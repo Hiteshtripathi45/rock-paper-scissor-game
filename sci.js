@@ -94,8 +94,10 @@ let p = document.getElementById('you').textContent
 }
 
 document.getElementById('reset').onclick = function(){
-    document.getElementById('yp').textContent = 0
-    document.getElementById('cp').textContent = 0
+    title.textContent = 'COMP-SCORE:0'
+    title2.textContent = 'YOUR-SCORE:0'
+    comptext.textContent= '❔'
+    yourtext.textContent= '❔'
     you=0
     comp=0
 }
