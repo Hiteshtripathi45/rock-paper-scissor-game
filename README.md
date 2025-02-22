@@ -46,7 +46,7 @@ Click the reset button to restart the game.
 
 Clone this repository:
 
-git clone https://github.com/yourusername/rock-paper-scissors.git
+git clone git@github.com:Hiteshtripathi45/rock-paper-scissor-game.git
 
 Navigate to the project folder:
 
@@ -58,6 +58,6 @@ Open index.html in your browser and start playing!
 
 This project is open-source and free to use for learning and personal projects.
 
-(___)
+---
 
 Feel free to contribute or suggest improvements! 🚀
