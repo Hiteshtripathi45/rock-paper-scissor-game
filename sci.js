@@ -7,16 +7,32 @@ let comp = 0;
 let you = 0;
 
 
+let result=document.getElementsByClassName('result')
+let r1 = document.getElementById('r1')
+let r2 = document.getElementById('r2')
+function youwinn(){
+    r1.textContent='YOU WIN'
+    r2.textContent=`${yourtext.textContent} beats ${comptext.textContent}`
+}
+
+function compwinn(){
+    r1.textContent='COMP WIN'
+    r2.textContent=`${comptext.textContent} beats ${yourtext.textContent}`
+}
+
+
+
 document.getElementById('rock').onclick = function(){
     document.getElementById('you').textContent = "rock"; 
     generate();
     dice()
     point()
+    changeresult()
 
 }
-
+let yourtext=document.getElementById('you')
 document.getElementById('paper').onclick = function(){
-    document.getElementById('you').textContent = "paper";
+    yourtext.textContent = "paper";
     generate();
     dice()
     point()
@@ -24,23 +40,23 @@ document.getElementById('paper').onclick = function(){
 }
 
 document.getElementById('sci').onclick = function(){
-    document.getElementById('you').textContent = "scissor";
+    yourtext.textContent = "scissor";
     generate();
     dice()
     point()
 }
 
 
-
+let comptext = document.getElementById('comp')
 function dice(){
 if(a===0){
-    document.getElementById('comp').textContent = 'rock';
+    comptext.textContent = 'rock';
 }
 else if (a===1){
-    document.getElementById('comp').textContent = 'paper';
+    comptext.textContent = 'paper';
 }
 else{
-    document.getElementById('comp').textContent = 'scissor';
+    comptext.textContent = 'scissor';
 } 
 }
 
@@ -49,9 +65,11 @@ function point(){
 let p = document.getElementById('you').textContent
     if((a===0 && p==='paper') || (a===1 && p==='scissor') || (a===2 && p==='rock')){
         you++;
+        youwinn()
     }
     else if ((a===0 && p==='scissor') || (a===1 && p==='rock') || (a===2 && p==='paper')){
         comp++;
+        compwinn()
     }
     document.getElementById('yp').textContent = you
 document.getElementById('cp').textContent = comp

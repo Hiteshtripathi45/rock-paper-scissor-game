@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'roboto',sans-serif;
 }
 
 
@@ -17,6 +18,18 @@ nav{
     font-size: 70px;
     font-weight: 900;
 }
+
+.result{
+    height: 90px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
 .point{
     height: 50px;
     width: 100%;
@@ -55,7 +68,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    background-color: rgb(212, 204, 204);
+    background-color: rgb(27, 32, 50);
 }
 .option{
     height: 100px;
