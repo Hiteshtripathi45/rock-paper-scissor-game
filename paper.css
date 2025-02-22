@@ -40,16 +40,16 @@ nav{
 
 }
 .fight{
-    height:270px;
-    width: 100%;
+    height:180px;
+    width: 50%;
     display: flex;
     justify-content: center;
     font-size: 30px;
 
 }
 .fight div{
-    height: 250px;
-    width: 250px;
+    height: 160px;
+    width: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,34 +57,41 @@ nav{
 }
 
 .fight h1{
-    background-color: bisque;
-    height: 200px;
-    width: 200px;
+    height: 170px;
+    width: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 90px;
 }
 body{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    align-items: center;
+    gap: 30px;
     background-color: rgb(27, 32, 50);
 }
 .option{
-    height: 100px;
-    width: 100%;
-    justify-content: center;
+    height: 170px;
+    width: 50%;
+    justify-content: space-around;
     display: flex;
     align-items: center;
     font-size: 30px;
 
 }
 .cc{
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     border: none;
+    background-color: rgb(73, 73, 141);
+    border-radius: 10%;
+    font-size: 70px;
 }
-.cc img{
-    width: 150px;
-    height: 150px;
+
+#title,#title2{
+    font-size: 18px;
+    color: white;
+
+
 }

@@ -10,20 +10,27 @@ let you = 0;
 let result=document.getElementsByClassName('result')
 let r1 = document.getElementById('r1')
 let r2 = document.getElementById('r2')
+let title = document.getElementById('title')
+let title2= document.getElementById('title2') 
 function youwinn(){
     r1.textContent='YOU WIN'
-    r2.textContent=`${yourtext.textContent} beats ${comptext.textContent}`
+    r2.textContent=`${yt} beats ${ct}`
 }
 
 function compwinn(){
     r1.textContent='COMP WIN'
-    r2.textContent=`${comptext.textContent} beats ${yourtext.textContent}`
+    r2.textContent=`${ct} beats ${yt}`
+}
+function tie(){
+    r1.textContent='ITS A TIE'
+    r2.textContent=`its a tie with ${yt}`
 }
 
 
 
 document.getElementById('rock').onclick = function(){
-    document.getElementById('you').textContent = "rock"; 
+    yourtext.textContent = "✊"; 
+    yt='rock'
     generate();
     dice()
     point()
@@ -31,8 +38,10 @@ document.getElementById('rock').onclick = function(){
 
 }
 let yourtext=document.getElementById('you')
+let yt
 document.getElementById('paper').onclick = function(){
-    yourtext.textContent = "paper";
+    yourtext.textContent = "🖐️";
+    yt='paper'
     generate();
     dice()
     point()
@@ -40,7 +49,8 @@ document.getElementById('paper').onclick = function(){
 }
 
 document.getElementById('sci').onclick = function(){
-    yourtext.textContent = "scissor";
+    yourtext.textContent = "✌️";
+    yt='scissor'
     generate();
     dice()
     point()
@@ -48,31 +58,39 @@ document.getElementById('sci').onclick = function(){
 
 
 let comptext = document.getElementById('comp')
-function dice(){
+let ct
+function dice(option){
 if(a===0){
-    comptext.textContent = 'rock';
+    comptext.textContent ='✊' ;
+
+    ct='rock'
 }
 else if (a===1){
-    comptext.textContent = 'paper';
+    comptext.textContent = '🖐️';
+    ct='paper'
 }
 else{
-    comptext.textContent = 'scissor';
+    comptext.textContent = '✌️';
+    ct='scissor'
 } 
 }
 
 function point(){
 
 let p = document.getElementById('you').textContent
-    if((a===0 && p==='paper') || (a===1 && p==='scissor') || (a===2 && p==='rock')){
+    if((a===0 && p==='🖐️') || (a===1 && p==='✌️') || (a===2 && p==='✊')){
         you++;
         youwinn()
     }
-    else if ((a===0 && p==='scissor') || (a===1 && p==='rock') || (a===2 && p==='paper')){
+    else if ((a===0 && p==='✌️') || (a===1 && p==='✊') || (a===2 && p==='🖐️')){
         comp++;
         compwinn()
     }
-    document.getElementById('yp').textContent = you
-document.getElementById('cp').textContent = comp
+    else{
+        tie()
+    }
+    title2.textContent=`YOUR-SCORE:${you}`
+    title.textContent=`COMP-SCORE:${comp}`
 }
 
 document.getElementById('reset').onclick = function(){
